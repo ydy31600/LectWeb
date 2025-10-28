@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h3>다양한 입력 폼</h3>
+
+    <form method="get" action="https://libnt.smuc.ac.kr/Search/?q=%3F&campuscode=00", lib> <!--주요속성!-->
+      <fieldset>
+      <legend>개인정보</legend>
+      성명: <input type="password" name="person" /> <br>
+
+      성별:
+      
+      <input type="radio" name="sex" value="male" checked/>남성
+      <input type="radio" name="sex" value="female" />여성 <!--남성과 여성ㅇ에 checked같이 넣어도 여성에 적용-->
+      <br>
+      <input type="hidden" name="hidden" value="check"/>
+      직업:
+      <select name="job" size="1">
+        <option>학생</option>
+        <option>회사원</option>
+        <option>공무원</option>
+        <option>기타</option>
+      </select>
+         </fieldset>
+         <fieldset>
+       <legend>구입희망분야</legend>
+      <p>
+        구입희망분야(복수선택 가능)<br>
+        - 분야:
+        <input type="checkbox" name="books" value="computer" />컴퓨터
+        <input type="checkbox" name="books" value="economy" />경제
+        <input type="checkbox" name="books" value="common" />상식
+        <br><br>
+
+        비고: <br>
+        <textarea name="comments" rows="4" cols="40"></textarea>
+      </p>
+      </fieldset>
+
+      <hr>
+
+      <input type="submit" value="신청" />
+      <input type="reset" value="취소" />
+    </form>
+  </body>
+</html>
