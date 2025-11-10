@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            DOM Tree
+        </title>
+    </head>
+    <body>
+        <article>
+        <h3 id="h3key" style="color : blue;">베스트셀러</h3>
+        <form>
+            <input type="button" value="버튼" onclick="alert('누름'); alert('누름2');">
+            <input id = "input_countup" type="button" value="버튼1">
+        </form>
+        <ol>
+            <li id="book1">컴퓨터와 IT기술의 이해 [개정판-2판]</li>
+            <li id="book2">모바일 멀티미디어</li>
+            <li id="book3">소셜미디어의 이해와 활용</li>
+        </ol>
+ 
+
+    </article>
+
+    <script type ="text/javascript">
+        num = 0;
+        function countup(){
+            num = num+1;
+            dom = document.getElementById("h3key");
+            dom.innerHTML = "";
+            setTimeout(countup,1000);
+        }
+        //function temp(){
+          //  num = num+1;
+          // countup(num); //영상ㅇ보면 사용법 나옴
+        //}
+        dom = document.getElementById("h3key"); //h3와 같음
+        dom.style.color = "red";  //파란색에서 빨간색으로 체인지 
+        dom.innerHTML = "AA"; //베스트셀러부분 체인지
+        dom.innerHTML += "3"; //이건 체인지가 아니고 추가
+
+        dominput = document.getElementById("input_countup");
+        dominput.onclick = countup; //함수명만 들어갈수있고 매개변수 없는거만 가능
+        
+   </script>
+    </body>
+    
+</html>
